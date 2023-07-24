@@ -21,7 +21,7 @@ public class findDuplicatesArray {
                 int resultValue = Math.abs(nums[i]);
                 int index = resultValue -1;
                 if(nums[index] <0){
-                    result.add(resultValue);
+                    result.add(resultValue +1);
                 }
                 nums[index] = -nums[index];
 
@@ -33,6 +33,10 @@ public class findDuplicatesArray {
         int[] array = list.stream().mapToInt(Integer::intValue).toArray();
         System.out.println(findDuplicates(array));
     }
+    /**
+     * Line number  result.add(resultValue +1);
+     * the new created index needs to be added 1.
+     */
 }
 
 /**
