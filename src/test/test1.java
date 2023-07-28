@@ -1,4 +1,4 @@
-package src.binarySearch.test;
+package src.test;
 
 /**
  * /**

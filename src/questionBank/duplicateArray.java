@@ -1,4 +1,4 @@
-package src.binarySearch.questionBank;
+package src.questionBank;
 
 import java.util.List;
 
