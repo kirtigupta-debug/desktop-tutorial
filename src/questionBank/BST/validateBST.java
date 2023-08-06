@@ -1,4 +1,4 @@
-package src.questionBank;
+package src.questionBank.BST;
 
 import  src.BinarySearchTree.TreeNode;
 import src.BinarySearchTree.validBST;
