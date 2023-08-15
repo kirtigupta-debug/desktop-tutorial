@@ -9,7 +9,10 @@ public class LowestCommanAnsector {
         }
 
         TreeNode leftLCA = lowestCommonAncestor(root.left, p, q);
+        System.out.println("Lowest Common Ancestor leftLCA : " + leftLCA);
         TreeNode rightLCA = lowestCommonAncestor(root.right, p, q);
+        System.out.println("Lowest Common Ancestor rightLCA : " + rightLCA);
+
 
         if (leftLCA != null && rightLCA != null) {
             return root; // Nodes are in different subtrees, so root is LCA
@@ -39,5 +42,22 @@ public class LowestCommanAnsector {
 
         TreeNode lca = solution.lowestCommonAncestor(root, p, q);
         System.out.println("Lowest Common Ancestor: " + lca.val);  // Output should be 5
+
+
+        TreeNode root1 = new TreeNode(3);
+        root1.left = new TreeNode(5);
+        root1.right = new TreeNode(1);
+        root1.left.left = new TreeNode(6);
+        root1.left.right = new TreeNode(2);
+        root1.left.right.left = new TreeNode(7);
+        root1.left.right.right = new TreeNode(4);
+        root1.right.left = new TreeNode(0);
+        root1.right.right = new TreeNode(8);
+
+        TreeNode p1 = root1.left;  // Node with value 5
+        TreeNode q1 = root1.right; // Node with value 1
+        TreeNode lca1 = solution.lowestCommonAncestor(root1, p1, q1);
+        System.out.println("Lowest Common Ancestor: " + lca1.val);  // Output should be 3
+
     }
 }
